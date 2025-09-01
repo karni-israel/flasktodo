@@ -4,7 +4,7 @@ name: Hello Israel K Workflow
 on:
   push:
     branches:
-      - master   # כל push ל-main יפעיל את ה-action
+      - main   # כל push ל-main יפעיל את ה-action
 
 jobs:
   say-hello:
