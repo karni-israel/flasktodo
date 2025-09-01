@@ -1,0 +1,20 @@
+name: Hello Israel K Workflow
+
+# האירוע שמפעיל את ה-workflow
+on:
+  push:
+    branches:
+      - master   # כל push ל-main יפעיל את ה-action
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest   # המחשב הווירטואלי שמריץ את ה-job
+
+    steps:
+      # צעד ראשון – מביא את הקוד מהרפוזיטורי
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # צעד שני – מדפיס Hello Israel K
+      - name: Print Hello Israel K
+        run: echo "Hello Israel K!"
